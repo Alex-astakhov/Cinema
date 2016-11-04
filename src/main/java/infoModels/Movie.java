@@ -8,10 +8,10 @@ public class Movie {
     private int year;
     private double rate;
 
-    public Movie(String title, String year, String rate){
+    public Movie(String title, String year, double rate){
         this.title = title;
         this.year = Integer.parseInt(year);
-        this.rate = Double.parseDouble(rate);
+        this.rate = rate;
     }
 
     public String getTitle(){

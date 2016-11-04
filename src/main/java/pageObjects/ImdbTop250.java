@@ -28,7 +28,7 @@ public class ImdbTop250 {
         List<WebElement> ratings = driver.findElements(movieRating);
         Movie[] movies = new Movie[titles.size()];
         for (int i = 0; i < titles.size(); i++) {
-            movies[i] = (new Movie(titles.get(i).getText(), years.get(i).getText().substring(1,5), ratings.get(i).getText().replace(',','.')));
+            movies[i] = (new Movie(titles.get(i).getText(), years.get(i).getText().substring(1,5), Double.parseDouble(ratings.get(i).getText().replace(',','.'))));
         }
         return movies;
     }
